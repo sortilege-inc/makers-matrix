@@ -26,11 +26,23 @@
                 Select Material
             </nb-card-header>
             <nb-card-body>
-                <nb-select status="primary" hero placeholder="Select Material" >
-                    <nb-option *ngFor="let item of avail_material" [value]="item.material">
-                        <span [innerHTML]="item.material"></span>
-                    </nb-option>
-                </nb-select>
+                <div class="form-wrapper">
+                    <div class="form-input">
+                        <nb-select status="primary" hero placeholder="Select Material" (selectedChange)="materialSelect($event)" >
+                            <nb-option *ngFor="let item of avail_material" [value]="item">
+                                <span [innerHTML]="item.material"></span>
+                            </nb-option>
+                        </nb-select>
+                    </div>
+                    <div class="form-result">
+                        <div *ngIf="selected_material">
+                            <div class="container"><div class="label">Level:</div><div class="value" [innerHTML]="selected_material.level"></div></div>
+                            <div class="container"><div class="label">Cost:</div><div class="value" [innerHTML]="selected_material.cost"></div></div>
+                            <div class="container"><div class="label">Currency:</div><div class="value" [innerHTML]="selected_material.currency"></div></div>
+                        </div>
+                    </div>
+                </div>
+
             </nb-card-body>
         </nb-card>
 
@@ -39,11 +51,22 @@
                 Select Ingredients
             </nb-card-header>
             <nb-card-body>
-                <nb-select status="primary" hero placeholder="Select Ingredient" >
-                    <nb-option *ngFor="let item of avail_ingredient" [value]="item.ingredient">
-                        <span [innerHTML]="item.ingredient"></span>
-                    </nb-option>
-                </nb-select>
+                <div class="form-wrapper">
+                    <div class="form-input">
+                        <nb-select status="primary" hero placeholder="Select Ingredient" (selectedChange)="ingredientSelect($event)">
+                            <nb-option *ngFor="let item of avail_ingredient" [value]="item">
+                                <span [innerHTML]="item.ingredient"></span>
+                            </nb-option>
+                        </nb-select>
+                    </div>
+                    <div class="form-result">
+                        <div *ngIf="selected_ingredient">
+                            <div class="container"><div class="label">Level:</div><div class="value" [innerHTML]="selected_ingredient.level"></div></div>
+                            <div class="container"><div class="label">Cost:</div><div class="value" [innerHTML]="selected_ingredient.cost"></div></div>
+                            <div class="container"><div class="label">Currency:</div><div class="value" [innerHTML]="selected_ingredient.currency"></div></div>
+                        </div>
+                    </div>
+                </div>
             </nb-card-body>
         </nb-card>
 

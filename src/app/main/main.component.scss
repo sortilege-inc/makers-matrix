@@ -2,3 +2,18 @@
   max-height: 75px;
   margin: 0 auto;
 }
+.form-wrapper {
+  display: flex;
+  .form-input {
+    width: 50%;
+  }
+  .form-result {
+    .container {
+      display: flex;
+      .label {
+        width: 150px;
+        font-weight: bold;
+      }
+    }
+  }
+}
