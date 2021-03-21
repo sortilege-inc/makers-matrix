@@ -67,6 +67,15 @@
                         </div>
                     </div>
                 </div>
+
+                <div class="form-wrapper">
+                    <div class="form-input">
+                        <input nbInput class="number-input" type="number" [(ngModel)]="ingredient_challenge" status="primary" placeholder="Ingredient Challenge Result" />
+                    </div>
+                    <div class="form-result">
+                        <button nbButton (click)="ingredientChallengeCheck()" status="success">Check</button>
+                    </div>
+                </div>
             </nb-card-body>
         </nb-card>
 
@@ -75,6 +84,9 @@
                 Add Catalyst (if needed)
             </nb-card-header>
             <nb-card-body>
+                <div *ngIf="catalyst_needed">
+                    <h1>Catalyst Needed!</h1>
+                </div>
             </nb-card-body>
         </nb-card>
 

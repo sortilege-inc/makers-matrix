@@ -15,6 +15,10 @@ export class MainComponent implements OnInit {
   selected_material?: MatrixMaterial;
   selected_ingredient?: MatrixIngredient;
 
+  ingredient_challenge?: number;
+
+  catalyst_needed: boolean = false;
+
   constructor(
     private service: MainService
   ) {}
@@ -34,6 +38,17 @@ export class MainComponent implements OnInit {
 
   ingredientSelect(ingredient: MatrixIngredient): void {
     this.selected_ingredient = ingredient;
+  }
+
+  ingredientChallengeCheck() {
+    if (this.ingredient_challenge && this.selected_ingredient &&
+      this.ingredient_challenge < this.selected_ingredient.level
+    ) {
+      this.catalyst_needed = true;
+    } else {
+      this.catalyst_needed = false;
+    }
+
   }
 
 }
