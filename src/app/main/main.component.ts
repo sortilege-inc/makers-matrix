@@ -19,7 +19,10 @@ export class MainComponent implements OnInit {
   ngOnInit(): void {
     this.service.getMaterials().subscribe(data => {
       this.avail_material = data;
-    })
+    });
+    this.service.getIngredients().subscribe(data => {
+      this.avail_ingredient = data;
+    });
   }
 
 }
