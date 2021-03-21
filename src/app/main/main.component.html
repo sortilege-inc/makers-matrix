@@ -1,0 +1,22 @@
+<nb-layout>
+    <nb-layout-header fixed>
+        <img class="logo" src="assets/Sun-9-Invisible-Sun.png" />
+    </nb-layout-header>
+
+    <nb-layout-column>
+        <nb-card>
+            <nb-card-header>
+                Effect Level
+            </nb-card-header>
+            <nb-card-body>
+                <nb-select status="primary" hero placeholder="Select Material" >
+                    <nb-option *ngFor="let item of avail_material" [value]="item.material">
+                        <span [innerHTML]="item.material"></span>
+                    </nb-option>
+                </nb-select>
+            </nb-card-body>
+        </nb-card>
+
+    </nb-layout-column>
+
+</nb-layout>

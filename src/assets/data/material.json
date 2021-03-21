@@ -1,0 +1,14 @@
+[
+  {
+    "material": "Iron",
+    "level": 1,
+    "cost": 10,
+    "currency": "crystal orbs"
+  },
+  {
+    "material": "Common Wood",
+    "level": 1,
+    "cost": 10,
+    "currency": "crystal orbs"
+  }
+]
