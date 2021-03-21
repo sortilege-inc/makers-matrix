@@ -1,0 +1,194 @@
+[
+  {
+    "ingredient": "Iron",
+    "level": 1,
+    "cost": 10,
+    "currency": "crystal orbs"
+  },
+  {
+    "ingredient": "Common Wood",
+    "level": 1,
+    "cost": 10,
+    "currency": "crystal orbs"
+  },
+  {
+    "ingredient": "Sugar",
+    "level": 1,
+    "cost": 10,
+    "currency": "glass orbs"
+  },
+  {
+    "ingredient": "Salt",
+    "level": 1,
+    "cost": 10,
+    "currency": "glass orbs"
+  },
+  {
+    "ingredient": "Spices",
+    "level": 1,
+    "cost": 10,
+    "currency": "glass orbs"
+  },
+  {
+    "ingredient": "Honey",
+    "level": 1,
+    "cost": 10,
+    "currency": "glass orbs"
+  },
+  {
+    "ingredient": "Caterpillar",
+    "level": 1,
+    "cost": 10,
+    "currency": "glass orbs"
+  },
+  {
+    "ingredient": "Mistletoe",
+    "level": 1,
+    "cost": 10,
+    "currency": "glass orbs"
+  },
+  {
+    "ingredient": "Bat Wings",
+    "level": 2,
+    "cost": 50,
+    "currency": "glass orbs"
+  },
+  {
+    "ingredient": "Rat Tail",
+    "level": 2,
+    "cost": 50,
+    "currency": "glass orbs"
+  },
+  {
+    "ingredient": "Newt's Eye",
+    "level": 2,
+    "cost": 50,
+    "currency": "glass orbs"
+  },
+  {
+    "ingredient": "Elderflower Stems",
+    "level": 2,
+    "cost": 50,
+    "currency": "glass orbs"
+  },
+  {
+    "ingredient": "Black Beetle Eye",
+    "level": 2,
+    "cost": 50,
+    "currency": "glass orbs"
+  },
+  {
+    "ingredient": "Powdered Moonstone",
+    "level": 2,
+    "cost": 50,
+    "currency": "glass orbs"
+  },
+  {
+    "ingredient": "Liquid Silver",
+    "level": 2,
+    "cost": 50,
+    "currency": "glass orbs"
+  },
+  {
+    "ingredient": "Bone Dust",
+    "level": 2,
+    "cost": 50,
+    "currency": "glass orbs"
+  },
+  {
+    "ingredient": "Nightshade",
+    "level": 2,
+    "cost": 50,
+    "currency": "glass orbs"
+  },
+  {
+    "ingredient": "Peacock Feather",
+    "level": 2,
+    "cost": 50,
+    "currency": "glass orbs"
+  },
+  {
+    "ingredient": "Crocodile Heart",
+    "level": 3,
+    "cost": 100,
+    "currency": "glass orbs"
+  },
+  {
+    "ingredient": "Powdered lilbana leaf",
+    "level": 3,
+    "cost": 1,
+    "currency": "crystal orbs"
+  },
+  {
+    "ingredient": "Eyelash of an infant",
+    "level": 3,
+    "cost": 1,
+    "currency": "crystal orbs"
+  },
+  {
+    "ingredient": "Elderbrin Tears",
+    "level": 3,
+    "cost": 1,
+    "currency": "crystal orbs"
+  },
+  {
+    "ingredient": "Toad hairs",
+    "level": 4,
+    "cost": 2,
+    "currency": "crystal orbs"
+  },
+  {
+    "ingredient": "Nettle Bird Feather",
+    "level": 4,
+    "cost": 5,
+    "currency": "crystal orbs"
+  },
+  {
+    "ingredient": "Mummy Dust",
+    "level": 4,
+    "cost": 5,
+    "currency": "crystal orbs"
+  },
+  {
+    "ingredient": "Gravel trod upon by a king",
+    "level": 5,
+    "cost": 10,
+    "currency": "crystal orbs"
+  },
+  {
+    "ingredient": "Polist petals",
+    "level": 6,
+    "cost": 20,
+    "currency": "crystal orbs"
+  },
+  {
+    "ingredient": "Powdered despair",
+    "level": 7,
+    "cost": 50,
+    "currency": "crystal orbs"
+  },
+  {
+    "ingredient": "Truespider eye",
+    "level": 7,
+    "cost": 50,
+    "currency": "crystal orbs"
+  },
+  {
+    "ingredient": "Errix hound blood",
+    "level": 8,
+    "cost": 1,
+    "currency": "mage coins"
+  },
+  {
+    "ingredient": "Secret name of an angel",
+    "level": 9,
+    "cost": 2,
+    "currency": "mage coins"
+  },
+  {
+    "ingredient": "Godsblood",
+    "level": 10,
+    "cost": 3,
+    "currency": "mage coins"
+  }
+]

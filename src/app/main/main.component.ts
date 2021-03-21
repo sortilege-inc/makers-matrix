@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MainService } from './main-service.service';
 import { MatrixMaterial } from './classes/matrix-material';
+import { MatrixIngredient } from './classes/matrix-ingredient';
 
 @Component({
   selector: 'app-main',
@@ -9,6 +10,7 @@ import { MatrixMaterial } from './classes/matrix-material';
 })
 export class MainComponent implements OnInit {
   public avail_material: MatrixMaterial[] = [];
+  public avail_ingredient: MatrixIngredient[] = [];
 
   constructor(
     private service: MainService

@@ -4,9 +4,26 @@
     </nb-layout-header>
 
     <nb-layout-column>
+
         <nb-card>
             <nb-card-header>
-                Effect Level
+                Step 1. Choose/Load Maker Profile
+            </nb-card-header>
+            <nb-card-body>
+            </nb-card-body>
+        </nb-card>
+
+        <nb-card>
+            <nb-card-header>
+                Choose Effect Level
+            </nb-card-header>
+            <nb-card-body>
+            </nb-card-body>
+        </nb-card>
+
+        <nb-card>
+            <nb-card-header>
+                Select Material
             </nb-card-header>
             <nb-card-body>
                 <nb-select status="primary" hero placeholder="Select Material" >
@@ -14,6 +31,51 @@
                         <span [innerHTML]="item.material"></span>
                     </nb-option>
                 </nb-select>
+            </nb-card-body>
+        </nb-card>
+
+        <nb-card>
+            <nb-card-header>
+                Select Ingredients
+            </nb-card-header>
+            <nb-card-body>
+                <nb-select status="primary" hero placeholder="Select Ingredient" >
+                    <nb-option *ngFor="let item of avail_ingredient" [value]="item.ingredient">
+                        <span [innerHTML]="item.ingredient"></span>
+                    </nb-option>
+                </nb-select>
+            </nb-card-body>
+        </nb-card>
+
+        <nb-card>
+            <nb-card-header>
+                Add Catalyst (if needed)
+            </nb-card-header>
+            <nb-card-body>
+            </nb-card-body>
+        </nb-card>
+
+        <nb-card>
+            <nb-card-header>
+                Add Stabilizer (if needed)
+            </nb-card-header>
+            <nb-card-body>
+            </nb-card-body>
+        </nb-card>
+
+        <nb-card>
+            <nb-card-header>
+                Attach Power Source
+            </nb-card-header>
+            <nb-card-body>
+            </nb-card-body>
+        </nb-card>
+
+        <nb-card>
+            <nb-card-header>
+                Past Inventions
+            </nb-card-header>
+            <nb-card-body>
             </nb-card-body>
         </nb-card>
 

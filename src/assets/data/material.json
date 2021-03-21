@@ -10,5 +10,167 @@
     "level": 1,
     "cost": 10,
     "currency": "crystal orbs"
+  },
+  {
+    "material": "Granite",
+    "level": 1,
+    "cost": 10,
+    "currency": "crystal orbs"
+  },
+  {
+    "material": "Glass",
+    "level": 1,
+    "cost": 10,
+    "currency": "crystal orbs"
+  },
+  {
+    "material": "Crystal",
+    "level": 2,
+    "cost": 25,
+    "currency": "crystal orbs"
+  },
+  {
+    "material": "Fine Iron",
+    "level": 2,
+    "cost": 25,
+    "currency": "crystal orbs"
+  },
+  {
+    "material": "Goblinbone",
+    "level": 2,
+    "cost": 25,
+    "currency": "crystal orbs"
+  },
+  {
+    "material": "Steel",
+    "level": 2,
+    "cost": 25,
+    "currency": "crystal orbs"
+  },
+  {
+    "material": "Gold",
+    "level": 3,
+    "cost": 50,
+    "currency": "crystal orbs"
+  },
+  {
+    "material": "Silver",
+    "level": 3,
+    "cost": 50,
+    "currency": "crystal orbs"
+  },
+  {
+    "material": "Human Flesh",
+    "level": 3,
+    "cost": 50,
+    "currency": "crystal orbs"
+  },
+  {
+    "material": "Ancient Oak",
+    "level": 3,
+    "cost": 50,
+    "currency": "crystal orbs"
+  },
+  {
+    "material": "Emerald",
+    "level": 4,
+    "cost": 75,
+    "currency": "crystal orbs"
+  },
+  {
+    "material": "Diamond",
+    "level": 4,
+    "cost": 75,
+    "currency": "crystal orbs"
+  },
+  {
+    "material": "Ice",
+    "level": 4,
+    "cost": 75,
+    "currency": "crystal orbs"
+  },
+  {
+    "material": "Silver Yak Hide",
+    "level": 5,
+    "cost": 100,
+    "currency": "crystal orbs"
+  },
+  {
+    "material": "Taborwire Threads",
+    "level": 5,
+    "cost": 100,
+    "currency": "crystal orbs"
+  },
+  {
+    "material": "Hastric Wood",
+    "level": 5,
+    "cost": 100,
+    "currency": "crystal orbs"
+  },
+  {
+    "material": "Lusterstone",
+    "level": 6,
+    "cost": 150,
+    "currency": "crystal orbs"
+  },
+  {
+    "material": "Ebonwood",
+    "level": 6,
+    "cost": 150,
+    "currency": "crystal orbs"
+  },
+  {
+    "material": "Frozen Curses",
+    "level": 6,
+    "cost": 150,
+    "currency": "crystal orbs"
+  },
+  {
+    "material": "Desaldium",
+    "level": 6,
+    "cost": 150,
+    "currency": "crystal orbs"
+  },
+  {
+    "material": "Demonbone",
+    "level": 7,
+    "cost": 200,
+    "currency": "crystal orbs"
+  },
+  {
+    "material": "Demonflesh",
+    "level": 7,
+    "cost": 200,
+    "currency": "crystal orbs"
+  },
+  {
+    "material": "Talish Glass",
+    "level": 8,
+    "cost": 1,
+    "currency": "mage coins"
+  },
+  {
+    "material": "Sands of Time",
+    "level": 9,
+    "cost": 2,
+    "currency": "mage coins"
+  },
+  {
+    "material": "Solidified Song",
+    "level": 9,
+    "cost": 2,
+    "currency": "mage coins"
+  },
+  {
+    "material": "Pure Love",
+    "level": 10,
+    "cost": 5,
+    "currency": "mage coins"
+  },
+  {
+    "material": "Godflesh",
+    "level": 10,
+    "cost": 5,
+    "currency": "mage coins"
   }
 ]
