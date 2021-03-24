@@ -100,7 +100,7 @@ export class MainComponent implements OnInit {
 
   ingredientChallengeCheck() {
     if (this.ingredient_challenge && this.venture && this.selected_ingredient &&
-      this.ingredient_challenge + this.venture < this.selected_ingredient.level
+      (this.ingredient_challenge + this.venture) < this.selected_ingredient.level
     ) {
       this.catalyst_needed = true;
     } else {
