@@ -10,6 +10,22 @@
                 Step 1. Choose/Load Maker Profile
             </nb-card-header>
             <nb-card-body>
+
+                <div class="form-wrapper">
+                    <div class="form-input">
+                        <nb-select status="primary" hero placeholder="Select Player" (selectedChange)="playerSelect($event)" >
+                            <nb-option *ngFor="let item of players" [value]="item">
+                                <span [innerHTML]="item.name"></span>
+                            </nb-option>
+                        </nb-select>
+                    </div>
+                    <div class="form-result">
+                        <div *ngIf="selected_player">
+                            <div class="container"><div class="label">Level:</div><div class="value" [innerHTML]="selected_player.level_number"></div></div>
+                        </div>
+                    </div>
+                </div>
+
             </nb-card-body>
         </nb-card>
 

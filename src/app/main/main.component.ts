@@ -9,6 +9,9 @@ import { MatrixIngredient } from './interfaces/matrix-ingredient';
   styleUrls: ['./main.component.scss']
 })
 export class MainComponent implements OnInit {
+  players = [];
+  selected_player;
+
   avail_material: MatrixMaterial[] = [];
   avail_ingredient: MatrixIngredient[] = [];
 
@@ -30,6 +33,9 @@ export class MainComponent implements OnInit {
     this.service.getIngredients().subscribe(data => {
       this.avail_ingredient = data;
     });
+    this.service.getPlayers().subscribe(data => {
+      this.players = data;
+    });
   }
 
   materialSelect(material: MatrixMaterial): void {
@@ -38,6 +44,10 @@ export class MainComponent implements OnInit {
 
   ingredientSelect(ingredient: MatrixIngredient): void {
     this.selected_ingredient = ingredient;
+  }
+
+  playerSelect(player):void {
+    this.selected_player = player;
   }
 
   ingredientChallengeCheck() {

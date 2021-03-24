@@ -19,4 +19,8 @@ export class MainService {
     return this.http.get<MatrixIngredient[]>('./assets/data/ingredient.json');
   }
 
+  getPlayers(): Observable<any[]> {
+    return this.http.get<any[]>('http://localhost:3001/player/all');
+  }
+
 }
