@@ -1,7 +1,7 @@
 [
   {
-    "catalyst": "Iron",
-    "level": 1,
+    "stabilizer": "Iron",
+    "level": 6,
     "cost": 10,
     "currency": "crystal orbs"
   }

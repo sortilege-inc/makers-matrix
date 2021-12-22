@@ -10,7 +10,7 @@ import {
   NbCardModule,
   NbSelectModule,
   NbInputModule,
-  NbButtonModule
+  NbButtonModule, NbTabsetModule
 } from '@nebular/theme';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
@@ -36,7 +36,8 @@ import {HttpClientModule} from '@angular/common/http';
     FormsModule,
     HttpClientModule,
     NbInputModule,
-    NbButtonModule
+    NbButtonModule,
+    NbTabsetModule
   ],
   providers: [],
   bootstrap: [AppComponent]

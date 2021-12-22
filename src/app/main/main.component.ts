@@ -45,6 +45,12 @@ export class MainComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
+    this.service.getCatalysts().subscribe(data => {
+      this.avail_catalyst = data;
+    });
+    this.service.getStabilizer().subscribe(data => {
+      this.avail_stabilizer = data;
+    });
     this.service.getMaterials().subscribe(data => {
       this.avail_material = data;
     });
@@ -78,14 +84,7 @@ export class MainComponent implements OnInit {
   }
 
   setChallenges() {
-    this.set_item_level = this.set_item_level;
-    this.set_depletion = this.set_depletion;
-    if (this.set_item_level && this.set_depletion
-    ) {
-      this.material_needed = true;
-    } else {
-      this.material_needed = false;
-    }
+    this.material_needed = !!(this.set_item_level && this.set_depletion);
   }
 
   materialChallengeCheck() {
@@ -99,33 +98,18 @@ export class MainComponent implements OnInit {
   }
 
   ingredientChallengeCheck() {
-    if (this.ingredient_challenge && this.venture && this.selected_ingredient &&
-      (this.ingredient_challenge + this.venture) < this.selected_ingredient.level
-    ) {
-      this.catalyst_needed = true;
-    } else {
-      this.catalyst_needed = false;
-    }
+    this.catalyst_needed = this.ingredient_challenge && this.venture && this.selected_ingredient &&
+      (this.ingredient_challenge + this.venture) < this.selected_ingredient.level;
   }
 
   catalystChallengeCheck() {
-    if (this.catalyst_challenge && this.venture && this.selected_catalyst &&
-      this.catalyst_challenge + this.venture < this.selected_catalyst.level
-    ) {
-      this.stabilizer_needed = true;
-    } else {
-      this.stabilizer_needed = false;
-    }
+    this.stabilizer_needed = this.catalyst_challenge && this.venture && this.selected_catalyst &&
+      this.catalyst_challenge + this.venture < this.selected_catalyst.level;
   }
 
   stabilizerChallengeCheck() {
-    if (this.stabilizer_challenge && this.venture && this.selected_stabilizer &&
-      this.stabilizer_challenge + this.venture < this.selected_stabilizer.level
-    ) {
-      this.mishap = true;
-    } else {
-      this.mishap = false;
-    }
+    this.mishap = this.stabilizer_challenge && this.venture && this.selected_stabilizer &&
+      this.stabilizer_challenge + this.venture < this.selected_stabilizer.level;
   }
 
 }
