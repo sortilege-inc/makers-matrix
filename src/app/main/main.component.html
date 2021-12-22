@@ -5,79 +5,242 @@
 
     <nb-layout-column>
 
-        <nb-card>
-            <nb-card-header>
-                Step 1. Choose/Load Maker Profile
-            </nb-card-header>
-            <nb-card-body>
-            </nb-card-body>
-        </nb-card>
+        <nb-tabset>
 
-        <nb-card>
-            <nb-card-header>
-                Choose Effect Level
-            </nb-card-header>
-            <nb-card-body>
-            </nb-card-body>
-        </nb-card>
+            <nb-tab tabTitle="Choose your Maker">
+                <nb-card>
+                    <nb-card-body>
+                        <div class="form-wrapper">
+                            <div class="form-input">
+                                <nb-select status="primary" hero placeholder="Select Player" (selectedChange)="playerSelect($event)" >
+                                    <nb-option *ngFor="let item of players" [value]="item">
+                                        <span [innerHTML]="item.name"></span>
+                                    </nb-option>
+                                </nb-select>
+                            </div>
+                            <div class="form-result">
+                                <div *ngIf="selected_player">
+                                    <div class="container"><div class="label">Level:</div><div class="value" [innerHTML]="selected_player.level_number"></div></div>
+                                </div>
+                            </div>
+                        </div>
 
-        <nb-card>
-            <nb-card-header>
-                Select Material
-            </nb-card-header>
-            <nb-card-body>
-                <nb-select status="primary" hero placeholder="Select Material" >
-                    <nb-option *ngFor="let item of avail_material" [value]="item.material">
-                        <span [innerHTML]="item.material"></span>
-                    </nb-option>
-                </nb-select>
-            </nb-card-body>
-        </nb-card>
+                        <nb-card>
+                            <nb-card-header>
+                                Choose Effect Level
+                            </nb-card-header>
+                            <nb-card-body>
+                                <div>
+                                    Issues noticed:
+                                    <ul>
+                                        <li>We need to do a "for X" loop with ingredients, as we need to add ingredients/catalysts/etc.</li>
+                                        <li>It's probably useful to expose the "current challenge level"</li>
+                                        <li>Would also like to append to a text area at the bottom that can function as a log of the process, as well as what we save as eventual output.</li>
+                                        <li>The stabilizer and catalyst drop downs are not connected somehow; I'm still missing that somewhere.</li>
+                                        <li>The ingredient check doesn't seem to work for me; unsure what I broke. The material test is working fine.</li>
+                                    </ul>
+                                </div>
+                                <div class="form-wrapper">
+                                    <div class="form-input">
+                                        <input nbInput class="number-input" type="number" [(ngModel)]="set_item_level" status="primary" placeholder="Choose Item Level" />
+                                        <nb-select placeholder="Set Depletion" [(selected)]="set_depletion">
+                                            <nb-option value="-1">Ephemera</nb-option>
+                                            <nb-option value="0">Object of Power, depletion 0-4+</nb-option>
+                                            <nb-option value="1">Object of Power, depletion 0-2</nb-option>
+                                            <nb-option value="2">Object of Power, depletion 0-1</nb-option>
+                                            <nb-option value="3">Object of Power, depletion 0</nb-option>
+                                            <nb-option value="4">Object of Power, passive/no depletion</nb-option>
+                                        </nb-select>
+                                    </div>
+                                    <div class="form-result">
+                                        <button nbButton (click)="setChallenges()" status="success">Make</button>
+                                    </div>
+                                </div>
+                            </nb-card-body>
+                        </nb-card>
 
-        <nb-card>
-            <nb-card-header>
-                Select Ingredients
-            </nb-card-header>
-            <nb-card-body>
-                <nb-select status="primary" hero placeholder="Select Ingredient" >
-                    <nb-option *ngFor="let item of avail_ingredient" [value]="item.ingredient">
-                        <span [innerHTML]="item.ingredient"></span>
-                    </nb-option>
-                </nb-select>
-            </nb-card-body>
-        </nb-card>
+                        <div *ngIf="material_needed">
+                            <nb-card>
+                                <nb-card-header>
+                                    Select Material (show this once the the effect has been set)
+                                </nb-card-header>
+                                <nb-card-body>
+                                    <div class="form-wrapper">
+                                        <div class="form-input">
+                                            <nb-select status="primary" hero placeholder="Select Material" (selectedChange)="materialSelect($event)" >
+                                                <nb-option *ngFor="let item of avail_material" [value]="item">
+                                                    <span [innerHTML]="item.material"></span>
+                                                </nb-option>
+                                            </nb-select>
+                                        </div>
+                                        <div class="form-result">
+                                            <div *ngIf="selected_material">
+                                                <div class="container"><div class="label">Level:</div><div class="value" [innerHTML]="selected_material.level"></div></div>
+                                                <div class="container"><div class="label">Cost:</div><div class="value" [innerHTML]="selected_material.cost"></div></div>
+                                                <div class="container"><div class="label">Currency:</div><div class="value" [innerHTML]="selected_material.currency"></div></div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-        <nb-card>
-            <nb-card-header>
-                Add Catalyst (if needed)
-            </nb-card-header>
-            <nb-card-body>
-            </nb-card-body>
-        </nb-card>
+                                    <div class="form-wrapper">
+                                        <div class="form-input">
+                                            <input nbInput class="number-input" type="number" [(ngModel)]="venture" status="primary" placeholder="Venture" />
+                                            <input nbInput class="number-input" type="number" [(ngModel)]="material_challenge" placeholder="Material Challenge Result" />
+                                        </div>
+                                        <div class="form-result">
+                                            <button nbButton (click)="materialChallengeCheck()" status="success">Check Material</button>
+                                        </div>
+                                    </div>
 
-        <nb-card>
-            <nb-card-header>
-                Add Stabilizer (if needed)
-            </nb-card-header>
-            <nb-card-body>
-            </nb-card-body>
-        </nb-card>
+                                </nb-card-body>
+                            </nb-card>
+                        </div>
 
-        <nb-card>
-            <nb-card-header>
-                Attach Power Source
-            </nb-card-header>
-            <nb-card-body>
-            </nb-card-body>
-        </nb-card>
+                        <div *ngIf="ingredient_needed">
+                            <nb-card>
+                                <nb-card-header>
+                                    Select Ingredients
+                                </nb-card-header>
+                                <nb-card-body>
+                                    <div class="form-wrapper">
+                                        <div class="form-input">
+                                            <nb-select status="primary" hero placeholder="Select Ingredient" (selectedChange)="ingredientSelect($event)">
+                                                <nb-option *ngFor="let item of avail_ingredient" [value]="item">
+                                                    <span [innerHTML]="item.ingredient"></span>
+                                                </nb-option>
+                                            </nb-select>
+                                        </div>
+                                        <div class="form-result">
+                                            <div *ngIf="selected_ingredient">
+                                                <div class="container"><div class="label">Level:</div><div class="value" [innerHTML]="selected_ingredient.level"></div></div>
+                                                <div class="container"><div class="label">Cost:</div><div class="value" [innerHTML]="selected_ingredient.cost"></div></div>
+                                                <div class="container"><div class="label">Currency:</div><div class="value" [innerHTML]="selected_ingredient.currency"></div></div>
+                                            </div>
+                                        </div>
+                                    </div>
 
-        <nb-card>
-            <nb-card-header>
-                Past Inventions
-            </nb-card-header>
-            <nb-card-body>
-            </nb-card-body>
-        </nb-card>
+                                    <div class="form-wrapper">
+                                        <div class="form-input">
+                                            <input nbInput class="number-input" type="number" [(ngModel)]="venture" status="primary" placeholder="Venture" />
+                                            <input nbInput class="number-input" type="number" [(ngModel)]="ingredient_challenge" placeholder="Ingredient Challenge Result" />
+                                        </div>
+                                        <div class="form-result">
+                                            <button nbButton (click)="ingredientChallengeCheck()" status="success">Check Ingredients</button>
+                                        </div>
+                                    </div>
+                                </nb-card-body>
+                            </nb-card>
+                        </div>
+
+                        <div *ngIf="catalyst_needed">
+                            <nb-card>
+                                <nb-card-header>
+                                    Add Catalyst (if needed)
+                                </nb-card-header>
+                                <nb-card-body>
+                                    <h1>Catalyst Needed!</h1>
+                                    <div class="form-wrapper">
+                                        <div class="form-input">
+                                            <nb-select status="primary" hero placeholder="Select Catalyst" (selectedChange)="catalystSelect($event)">
+                                                <nb-option *ngFor="let item of avail_catalyst" [value]="item">
+                                                    <span [innerHTML]="item.catalyst"></span>
+                                                </nb-option>
+                                            </nb-select>
+                                        </div>
+                                        <div class="form-result">
+                                            <div *ngIf="selected_catalyst">
+                                                <div class="container"><div class="label">Level:</div><div class="value" [innerHTML]="selected_catalyst.level"></div></div>
+                                                <div class="container"><div class="label">Cost:</div><div class="value" [innerHTML]="selected_catalyst.cost"></div></div>
+                                                <div class="container"><div class="label">Currency:</div><div class="value" [innerHTML]="selected_catalyst.currency"></div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-wrapper">
+                                        <div class="form-input">
+                                            <input nbInput class="number-input" type="number" [(ngModel)]="venture" status="primary" placeholder="Venture" />
+                                            <input nbInput class="number-input" type="number" [(ngModel)]="catalyst_challenge" placeholder="Catalyst Challenge Result" />
+                                        </div>
+                                        <div class="form-result">
+                                            <button nbButton (click)="catalystChallengeCheck()" status="success">Check Catalyst</button>
+                                        </div>
+                                    </div>
+                                </nb-card-body>
+                            </nb-card>
+                        </div>
+
+                        <div *ngIf="stabilizer_needed">
+                            <nb-card>
+                                <nb-card-header>
+                                    Add Stabilizer (if needed)
+                                </nb-card-header>
+                                <nb-card-body>
+                                    <h1>Stabilizer Needed!</h1>
+                                    <div class="form-wrapper">
+                                        <div class="form-input">
+                                            <nb-select status="primary" hero placeholder="Select Stabilizer" (selectedChange)="stabilizerSelect($event)">
+                                                <nb-option *ngFor="let item of avail_stabilizer" [value]="item">
+                                                    <span [innerHTML]="item.stabilizer"></span>
+                                                </nb-option>
+                                            </nb-select>
+                                        </div>
+                                        <div class="form-result">
+                                            <div *ngIf="selected_stabilizer">
+                                                <div class="container"><div class="label">Level:</div><div class="value" [innerHTML]="selected_stabilizer.level"></div></div>
+                                                <div class="container"><div class="label">Cost:</div><div class="value" [innerHTML]="selected_stabilizer.cost"></div></div>
+                                                <div class="container"><div class="label">Currency:</div><div class="value" [innerHTML]="selected_stabilizer.currency"></div></div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-wrapper">
+                                        <div class="form-input">
+                                            <input nbInput class="number-input" type="number" [(ngModel)]="venture" status="primary" placeholder="Venture" />
+                                            <input nbInput class="number-input" type="number" [(ngModel)]="stabilizer_challenge" placeholder="Stabilizer Challenge Result" />
+                                        </div>
+                                        <div class="form-result">
+                                            <button nbButton (click)="stabilizerChallengeCheck()" status="success">Check Stabilizer</button>
+                                        </div>
+                                    </div>
+                                </nb-card-body>
+                            </nb-card>
+                        </div>
+
+                        <div *ngIf="mishap">
+                            <nb-card>
+                                <nb-card-header>
+                                    Mishap!
+                                </nb-card-header>
+                                <nb-card-body>
+                                </nb-card-body>
+                            </nb-card>
+                        </div>
+
+                        <div *ngIf="power_source_needed">
+                            <nb-card>
+                                <nb-card-header>
+                                    Attach Power Source
+                                </nb-card-header>
+                                <nb-card-body>
+                                </nb-card-body>
+                            </nb-card>
+                        </div>
+
+
+                    </nb-card-body>
+                </nb-card>
+            </nb-tab>
+
+            <nb-tab tabTitle="Previous Creations">
+                <nb-card>
+                    <nb-card-body>
+                    </nb-card-body>
+                </nb-card>
+            </nb-tab>
+
+        </nb-tabset>
+
+
 
     </nb-layout-column>
 
