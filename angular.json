@@ -34,7 +34,10 @@
               "src/styles.scss",
               "node_modules/@nebular/theme/styles/prebuilt/dark.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "eva-icons"
+            ]
           },
           "configurations": {
             "production": {
