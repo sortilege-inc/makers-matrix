@@ -34,7 +34,10 @@
               "src/styles.scss",
               "node_modules/@nebular/theme/styles/prebuilt/dark.css"
             ],
-            "scripts": []
+            "scripts": [],
+            "allowedCommonJsDependencies": [
+              "eva-icons"
+            ]
           },
           "configurations": {
             "production": {
@@ -101,15 +104,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
             ]
           }
         },
@@ -128,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "makers-matrix"
+  "defaultProject": "makers-matrix",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
