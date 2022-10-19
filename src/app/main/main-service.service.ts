@@ -13,17 +13,16 @@ export class MainService {
 
   constructor(private http: HttpClient) { }
 
+  getPlayers(): Observable<any[]> {
+    return this.http.get<any[]>('http://localhost:3001/player/all');
+  }
+
   getMaterials(): Observable<MatrixMaterial[]> {
     return this.http.get<MatrixMaterial[]>('./assets/data/material.json');
   }
 
   getIngredients(): Observable<MatrixIngredient[]> {
     return this.http.get<MatrixIngredient[]>('./assets/data/ingredient.json');
-  }
-
-
-  getPlayers(): Observable<any[]> {
-    return this.http.get<any[]>('http://localhost:3001/player/all');
   }
 
   getCatalysts(): Observable<MatrixCatalyst[]> {

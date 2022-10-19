@@ -1,0 +1,68 @@
+[
+  {
+    "powerSource": "Good intentions",
+    "level": 1,
+    "cost": "-",
+    "currency": "-"
+  },
+  {
+    "powerSource": "Heat from a silent fire",
+    "level": 2,
+    "cost": 4,
+    "currency": "crystal orbs"
+  },
+  {
+    "powerSource": "Stray idea",
+    "level": 2,
+    "cost": 4,
+    "currency": "crystal orbs"
+  },
+  {
+    "powerSource": "Moon fox brain",
+    "level": 3,
+    "cost": 8,
+    "currency": "crystal orbs"
+  },
+  {
+    "powerSource": "Qaat leaf solution",
+    "level": 4,
+    "cost": 15,
+    "currency": "crystal orbs"
+  },
+  {
+    "powerSource": "Vug essence",
+    "level": 5,
+    "cost": 30,
+    "currency": "crystal orbs"
+  },
+  {
+    "powerSource": "Cold trapped in crystal",
+    "level": 6,
+    "cost": 50,
+    "currency": "crystal orbs"
+  },
+  {
+    "powerSource": "Demon’s heart",
+    "level": 7,
+    "cost": 1,
+    "currency": "gem orb"
+  },
+  {
+    "powerSource": "Durrantix eye",
+    "level": 8,
+    "cost": 1,
+    "currency": "magecoin"
+  },
+  {
+    "powerSource": "Vigor shard",
+    "level": 9,
+    "cost": 2,
+    "currency": "magecoins"
+  },
+  {
+    "powerSource": "Sun essence",
+    "level": 10,
+    "cost": 5,
+    "currency": "magecoins"
+  }
+]

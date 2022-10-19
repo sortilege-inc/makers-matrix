@@ -1,8 +1,104 @@
 [
   {
-    "catalyst": "Iron",
+    "catalyst": "Sulfur",
+    "level": 1,
+    "cost": 10,
+    "currency": "orbs"
+  },
+  {
+    "catalyst": "Rotten egg",
+    "level": 1,
+    "cost": 10,
+    "currency": "orbs"
+  },
+  {
+    "catalyst": "Platinum",
+    "level": 2,
+    "cost": 50,
+    "currency": "orbs"
+  },
+  {
+    "catalyst": "Prism",
+    "level": 2,
+    "cost": 50,
+    "currency": "orbs"
+  },
+  {
+    "catalyst": "Snake fang",
+    "level": 2,
+    "cost": 50,
+    "currency": "orbs"
+  },
+  {
+    "catalyst": "Wormwood",
+    "level": 2,
+    "cost": 50,
+    "currency": "orbs"
+  },
+  {
+    "catalyst": "Powdered redweed",
+    "level": 3,
+    "cost": 1,
+    "currency": "crystal orb"
+  },
+  {
+    "catalyst": "Moon fox hair",
+    "level": 3,
+    "cost": 1,
+    "currency": "crystal orb"
+  },
+  {
+    "catalyst": "Demon blood",
+    "level": 4,
+    "cost": 2,
+    "currency": "crystal orbs"
+  },
+  {
+    "catalyst": "Ivum",
+    "level": 4,
+    "cost": 2,
+    "currency": "crystal orbs"
+  },
+  {
+    "catalyst": "Tears of a spider",
     "level": 5,
+    "cost": 5,
+    "currency": "crystal orbs"
+  },
+  {
+    "catalyst": "Trasnian emerald",
+    "level": 6,
     "cost": 10,
     "currency": "crystal orbs"
+  },
+  {
+    "catalyst": "Jerymal bone",
+    "level": 7,
+    "cost": 20,
+    "currency": "crystal orbs"
+  },
+  {
+    "catalyst": "Durrantix heart",
+    "level": 8,
+    "cost": 50,
+    "currency": "crystal orbs"
+  },
+  {
+    "catalyst": "Footprint of a ghost",
+    "level": 9,
+    "cost": 1,
+    "currency": "magecoin"
+  },
+  {
+    "catalyst": "Kind words sincerely spoken by an evil man",
+    "level": 9,
+    "cost": 1,
+    "currency": "magecoin"
+  },
+  {
+    "catalyst": "Distilled darkness",
+    "level": 10,
+    "cost": 2,
+    "currency": "magecoins"
   }
 ]
