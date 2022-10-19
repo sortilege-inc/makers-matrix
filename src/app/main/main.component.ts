@@ -33,12 +33,12 @@ export class MainComponent implements OnInit {
   catalyst_challenge?: number;
   stabilizer_challenge?: number;
 
-  material_needed: boolean = false;
-  ingredient_needed: boolean = false;
-  catalyst_needed: boolean = false;
-  stabilizer_needed: boolean = false;
-  power_source_needed: boolean = false;
-  mishap: boolean = false;
+  material_needed = false;
+  ingredient_needed = false;
+  catalyst_needed = false;
+  stabilizer_needed = false;
+  power_source_needed = false;
+  mishap = false;
 
   constructor(
     private service: MainService
@@ -71,7 +71,7 @@ export class MainComponent implements OnInit {
   }
 
 
-  playerSelect(player):void {
+  playerSelect(player): void {
     this.selected_player = player;
   }
 
@@ -99,7 +99,7 @@ export class MainComponent implements OnInit {
 
   ingredientChallengeCheck() {
     this.catalyst_needed = this.ingredient_challenge && this.venture && this.selected_ingredient &&
-      (this.ingredient_challenge + this.venture) < this.selected_ingredient.level;
+      this.ingredient_challenge + this.venture < this.selected_ingredient.level;
   }
 
   catalystChallengeCheck() {
