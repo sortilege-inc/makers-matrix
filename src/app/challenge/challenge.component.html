@@ -24,6 +24,7 @@
       <div class="form-input">
         <input nbInput class="number-input" type="number" [(ngModel)]="venture" status="primary" placeholder="Venture" />
         <input nbInput class="number-input" type="number" [(ngModel)]="integrantChallenge" placeholder="{{integrantType}} Challenge Result" />
+        <button nbButton (click)="rollChallenge()">Roll</button>
       </div>
       <div class="form-result">
         <button nbButton (click)="integrantChallengeCheck()" status="success">Check {{integrantType}}</button>

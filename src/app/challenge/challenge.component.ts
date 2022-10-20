@@ -38,4 +38,7 @@ export class ChallengeComponent implements OnInit {
       this.integrantChallenge + this.venture >= this.selectedIntegrant.level);
   }
 
+  rollChallenge() {
+    this.integrantChallenge = Math.floor(Math.random() * 9);
+  }
 }
