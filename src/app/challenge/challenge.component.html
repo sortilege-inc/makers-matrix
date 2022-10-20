@@ -1,0 +1,33 @@
+<nb-card>
+  <nb-card-header>
+    Add {{integrantType}}
+  </nb-card-header>
+  <nb-card-body>
+    <div class="form-wrapper">
+      <div class="form-input">
+        <nb-select status="primary" hero placeholder="Select {{integrantType}}" (selectedChange)="integrantSelect($event)">
+          <nb-option *ngFor="let item of integrantList" [value]="item">
+            <span [innerHTML]="item.name"></span>
+          </nb-option>
+        </nb-select>
+      </div>
+      <div class="form-result">
+        <div *ngIf="selectedIntegrant">
+          <div class="container"><div class="label">Level:</div><div class="value" [innerHTML]="selectedIntegrant.level"></div></div>
+          <div class="container"><div class="label">Cost:</div><div class="value" [innerHTML]="selectedIntegrant.cost"></div></div>
+          <div class="container"><div class="label">Currency:</div><div class="value" [innerHTML]="selectedIntegrant.currency"></div></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-wrapper">
+      <div class="form-input">
+        <input nbInput class="number-input" type="number" [(ngModel)]="venture" status="primary" placeholder="Venture" />
+        <input nbInput class="number-input" type="number" [(ngModel)]="integrantChallenge" placeholder="{{integrantType}} Challenge Result" />
+      </div>
+      <div class="form-result">
+        <button nbButton (click)="integrantChallengeCheck()" status="success">Check {{integrantType}}</button>
+      </div>
+    </div>
+  </nb-card-body>
+</nb-card>

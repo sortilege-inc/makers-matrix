@@ -1,102 +1,102 @@
 [
   {
-    "catalyst": "Sulfur",
+    "name": "Sulfur",
     "level": 1,
     "cost": 10,
     "currency": "orbs"
   },
   {
-    "catalyst": "Rotten egg",
+    "name": "Rotten egg",
     "level": 1,
     "cost": 10,
     "currency": "orbs"
   },
   {
-    "catalyst": "Platinum",
+    "name": "Platinum",
     "level": 2,
     "cost": 50,
     "currency": "orbs"
   },
   {
-    "catalyst": "Prism",
+    "name": "Prism",
     "level": 2,
     "cost": 50,
     "currency": "orbs"
   },
   {
-    "catalyst": "Snake fang",
+    "name": "Snake fang",
     "level": 2,
     "cost": 50,
     "currency": "orbs"
   },
   {
-    "catalyst": "Wormwood",
+    "name": "Wormwood",
     "level": 2,
     "cost": 50,
     "currency": "orbs"
   },
   {
-    "catalyst": "Powdered redweed",
+    "name": "Powdered redweed",
     "level": 3,
     "cost": 1,
     "currency": "crystal orb"
   },
   {
-    "catalyst": "Moon fox hair",
+    "name": "Moon fox hair",
     "level": 3,
     "cost": 1,
     "currency": "crystal orb"
   },
   {
-    "catalyst": "Demon blood",
+    "name": "Demon blood",
     "level": 4,
     "cost": 2,
     "currency": "crystal orbs"
   },
   {
-    "catalyst": "Ivum",
+    "name": "Ivum",
     "level": 4,
     "cost": 2,
     "currency": "crystal orbs"
   },
   {
-    "catalyst": "Tears of a spider",
+    "name": "Tears of a spider",
     "level": 5,
     "cost": 5,
     "currency": "crystal orbs"
   },
   {
-    "catalyst": "Trasnian emerald",
+    "name": "Trasnian emerald",
     "level": 6,
     "cost": 10,
     "currency": "crystal orbs"
   },
   {
-    "catalyst": "Jerymal bone",
+    "name": "Jerymal bone",
     "level": 7,
     "cost": 20,
     "currency": "crystal orbs"
   },
   {
-    "catalyst": "Durrantix heart",
+    "name": "Durrantix heart",
     "level": 8,
     "cost": 50,
     "currency": "crystal orbs"
   },
   {
-    "catalyst": "Footprint of a ghost",
+    "name": "Footprint of a ghost",
     "level": 9,
     "cost": 1,
     "currency": "magecoin"
   },
   {
-    "catalyst": "Kind words sincerely spoken by an evil man",
+    "name": "Kind words sincerely spoken by an evil man",
     "level": 9,
     "cost": 1,
     "currency": "magecoin"
   },
   {
-    "catalyst": "Distilled darkness",
+    "name": "Distilled darkness",
     "level": 10,
     "cost": 2,
     "currency": "magecoins"

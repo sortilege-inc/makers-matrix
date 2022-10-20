@@ -17,11 +17,13 @@ import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { MainComponent } from './main/main.component';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { ChallengeComponent } from './challenge/challenge.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainComponent
+    MainComponent,
+    ChallengeComponent
   ],
   imports: [
     BrowserModule,

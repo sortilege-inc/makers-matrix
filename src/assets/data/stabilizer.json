@@ -1,102 +1,102 @@
 [
   {
-    "stabilizer": "Cow’s milk",
+    "name": "Cow’s milk",
     "level": 1,
     "cost": 10,
     "currency": "orbs"
   },
   {
-    "stabilizer": "Purified water",
+    "name": "Purified water",
     "level": 1,
     "cost": 10,
     "currency": "orbs"
   },
   {
-    "stabilizer": "Aloe",
+    "name": "Aloe",
     "level": 1,
     "cost": 10,
     "currency": "orbs"
   },
   {
-    "stabilizer": "Vinegar",
+    "name": "Vinegar",
     "level": 1,
     "cost": 10,
     "currency": "orbs"
   },
   {
-    "stabilizer": "Pure note of middle C",
+    "name": "Pure note of middle C",
     "level": 2,
     "cost": 50,
     "currency": "orbs"
   },
   {
-    "stabilizer": "Cat’s eye",
+    "name": "Cat’s eye",
     "level": 2,
     "cost": 50,
     "currency": "orbs"
   },
   {
-    "stabilizer": "Turtle shell",
+    "name": "Turtle shell",
     "level": 2,
     "cost": 50,
     "currency": "orbs"
   },
   {
-    "stabilizer": "Powdered diamond",
+    "name": "Powdered diamond",
     "level": 3,
     "cost": 1,
     "currency": "crystal orb"
   },
   {
-    "stabilizer": "Lyvandris syrup",
+    "name": "Lyvandris syrup",
     "level": 4,
     "cost": 2,
     "currency": "crystal orbs"
   },
   {
-    "stabilizer": "Urbrail mist",
+    "name": "Urbrail mist",
     "level": 5,
     "cost": 5,
     "currency": "crystal orbs"
   },
   {
-    "stabilizer": "Milk silk",
+    "name": "Milk silk",
     "level": 6,
     "cost": 10,
     "currency": "crystal orbs"
   },
   {
-    "stabilizer": "Kithra heart",
+    "name": "Kithra heart",
     "level": 7,
     "cost": 20,
     "currency": "crystal orbs"
   },
   {
-    "stabilizer": "Mother’s final word",
+    "name": "Mother’s final word",
     "level": 8,
     "cost": 1,
     "currency": "magecoin"
   },
   {
-    "stabilizer": "Breath of an angel",
+    "name": "Breath of an angel",
     "level": 8,
     "cost": 1,
     "currency": "magecoin"
   },
   {
-    "stabilizer": "Cat’s loyalty",
+    "name": "Cat’s loyalty",
     "level": 9,
     "cost": 2,
     "currency": "magecoins"
   },
   {
-    "stabilizer": "Liquid moonlight",
+    "name": "Liquid moonlight",
     "level": 9,
     "cost": 2,
     "currency": "magecoins"
   },
   {
-    "stabilizer": "Gaze of an angel",
+    "name": "Gaze of an angel",
     "level": 10,
     "cost": 5,
     "currency": "magecoins"

@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MainService } from './main-service.service';
-import { MatrixMaterial } from './interfaces/matrix-material';
-import { MatrixIngredient } from './interfaces/matrix-ingredient';
-import { MatrixCatalyst } from './interfaces/matrix-catalyst';
-import { MatrixStabilizer } from './interfaces/matrix-stabilizer';
+import { Integrant } from './integrant';
+import { Challenge } from './challenge';
 
 @Component({
   selector: 'app-main',
@@ -14,15 +12,18 @@ export class MainComponent implements OnInit {
   players = [];
   selected_player;
 
-  avail_material: MatrixMaterial[] = [];
-  avail_ingredient: MatrixIngredient[] = [];
-  avail_catalyst: MatrixCatalyst[] = [];
-  avail_stabilizer: MatrixStabilizer[] = [];
+  avail_material: Integrant[] = [];
+  avail_ingredient: Integrant[] = [];
+  avail_catalyst: Integrant[] = [];
+  avail_stabilizer: Integrant[] = [];
+  avail_powerSource: Integrant[] = [];
 
-  selected_material?: MatrixMaterial;
-  selected_ingredient?: MatrixIngredient;
-  selected_catalyst?: MatrixCatalyst;
-  selected_stabilizer?: MatrixStabilizer;
+  challengeLevel = 1;
+
+  selected_material?: Integrant;
+  selected_ingredient?: Integrant;
+  selected_catalyst?: Integrant;
+  selected_stabilizer?: Integrant;
 
   set_item_level?: number;
   set_depletion?: number;
@@ -39,6 +40,8 @@ export class MainComponent implements OnInit {
   stabilizer_needed = false;
   power_source_needed = false;
   mishap = false;
+
+  challenges?: Challenge[] = [];
 
   constructor(
     private service: MainService
@@ -57,29 +60,56 @@ export class MainComponent implements OnInit {
     this.service.getIngredients().subscribe(data => {
       this.avail_ingredient = data;
     });
+    this.service.getPowerSource().subscribe(data => {
+      this.avail_powerSource = data;
+    });
     this.service.getPlayers().subscribe(data => {
       this.players = data;
     });
   }
 
-  materialSelect(material: MatrixMaterial): void {
-    this.selected_material = material;
+  handleMake() {
+    if (this.set_item_level && this.set_depletion) {
+      this.challenges.push({
+        integrantList: this.avail_ingredient,
+        integrantType: 'Ingredient',
+        initVenture: 1
+      });
+    }
   }
 
-  ingredientSelect(ingredient: MatrixIngredient): void {
-    this.selected_ingredient = ingredient;
+  handleCheck(checkResult: boolean) {
+    if (checkResult) {
+      this.challengeLevel++;
+      if (this.challengeLevel<this.set_item_level) {
+        this.challenges.push({
+          integrantList: this.avail_ingredient,
+          integrantType: 'Ingredient',
+          initVenture: 1
+        });
+      }
+    }
   }
-
 
   playerSelect(player): void {
     this.selected_player = player;
   }
 
-  catalystSelect(catalyst: MatrixCatalyst): void {
+  /*
+  materialSelect(material: Integrant): void {
+    this.selected_material = material;
+  }
+
+  ingredientSelect(ingredient: Integrant): void {
+    this.selected_ingredient = ingredient;
+  }
+
+
+  catalystSelect(catalyst: Integrant): void {
     this.selected_catalyst = catalyst;
   }
 
-  stabilizerSelect(stabilizer: MatrixStabilizer): void {
+  stabilizerSelect(stabilizer: Integrant): void {
     this.selected_stabilizer = stabilizer;
   }
 
@@ -111,6 +141,7 @@ export class MainComponent implements OnInit {
     this.mishap = this.stabilizer_challenge && this.venture && this.selected_stabilizer &&
       this.stabilizer_challenge + this.venture < this.selected_stabilizer.level;
   }
+*/
 
 }
 

@@ -55,13 +55,17 @@
                     </nb-select>
                   </div>
                   <div class="form-result">
-                    <button nbButton (click)="setChallenges()" status="success">Make</button>
+                    <button nbButton (click)="handleMake()" status="success">Make</button>
                   </div>
                 </div>
               </nb-card-body>
             </nb-card>
 
-            <!--Select material-->
+            <div *ngFor="let challenge of challenges">
+              <app-challenge [challenge]="challenge" (checkResult)="handleCheck($event)"></app-challenge>
+            </div>
+            <!--
+            Select material
             <div *ngIf="material_needed">
               <nb-card>
                 <nb-card-header>
@@ -72,7 +76,7 @@
                     <div class="form-input">
                       <nb-select status="primary" hero placeholder="Select Material" (selectedChange)="materialSelect($event)" >
                         <nb-option *ngFor="let item of avail_material" [value]="item">
-                          <span [innerHTML]="item.material"></span>
+                          <span [innerHTML]="item.name"></span>
                         </nb-option>
                       </nb-select>
                     </div>
@@ -98,7 +102,7 @@
               </nb-card>
             </div>
 
-            <!--Select ingredient-->
+            Select ingredient
             <div *ngIf="ingredient_needed">
               <nb-card>
                 <nb-card-header>
@@ -109,7 +113,7 @@
                     <div class="form-input">
                       <nb-select status="primary" hero placeholder="Select Ingredient" (selectedChange)="ingredientSelect($event)">
                         <nb-option *ngFor="let item of avail_ingredient" [value]="item">
-                          <span [innerHTML]="item.ingredient"></span>
+                          <span [innerHTML]="item.name"></span>
                         </nb-option>
                       </nb-select>
                     </div>
@@ -135,7 +139,7 @@
               </nb-card>
             </div>
 
-            <!--Select catalyst-->
+            Select catalyst
             <div *ngIf="catalyst_needed">
               <nb-card>
                 <nb-card-header>
@@ -147,7 +151,7 @@
                     <div class="form-input">
                       <nb-select status="primary" hero placeholder="Select Catalyst" (selectedChange)="catalystSelect($event)">
                         <nb-option *ngFor="let item of avail_catalyst" [value]="item">
-                          <span [innerHTML]="item.catalyst"></span>
+                          <span [innerHTML]="item.name"></span>
                         </nb-option>
                       </nb-select>
                     </div>
@@ -173,7 +177,7 @@
               </nb-card>
             </div>
 
-            <!--Select stabilizer-->
+            Select stabilizer
             <div *ngIf="stabilizer_needed">
               <nb-card>
                 <nb-card-header>
@@ -185,7 +189,7 @@
                     <div class="form-input">
                       <nb-select status="primary" hero placeholder="Select Stabilizer" (selectedChange)="stabilizerSelect($event)">
                         <nb-option *ngFor="let item of avail_stabilizer" [value]="item">
-                          <span [innerHTML]="item.stabilizer"></span>
+                          <span [innerHTML]="item.name"></span>
                         </nb-option>
                       </nb-select>
                     </div>
@@ -210,7 +214,7 @@
                 </nb-card-body>
               </nb-card>
             </div>
-
+          -->
             <!--Mishap card (not yet built)-->
             <div *ngIf="mishap">
               <nb-card>
