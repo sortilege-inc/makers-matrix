@@ -33,6 +33,7 @@
               </nb-card-header>
               <nb-card-body>
                 <div>
+                  Challenge level: {{challengeLevel}} <br>
                   Issues noticed:
                   <ul>
                     <li>We need to do a "for X" loop with ingredients, as we need to add ingredients/catalysts/etc.</li>
@@ -214,8 +215,8 @@
                 </nb-card-body>
               </nb-card>
             </div>
-          -->
-            <!--Mishap card (not yet built)-->
+
+            <!--Mishap card (not yet built)
             <div *ngIf="mishap">
               <nb-card>
                 <nb-card-header>
@@ -226,15 +227,16 @@
                 </nb-card-body>
               </nb-card>
             </div>
-
-            <!--Select power source (not yet built)-->
-            <div *ngIf="power_source_needed">
+          -->
+          
+            <!--Temp result card-->
+            <div *ngIf="item_created">
               <nb-card>
                 <nb-card-header>
-                  Attach Power Source
+                  Success!
                 </nb-card-header>
                 <nb-card-body>
-                  Lorem ipsum
+                  Object of power created.
                 </nb-card-body>
               </nb-card>
             </div>

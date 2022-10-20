@@ -35,7 +35,7 @@ export class ChallengeComponent implements OnInit {
 
   integrantChallengeCheck() {
     this.checkResult.emit(this.integrantChallenge && this.venture && this.selectedIntegrant &&
-      this.integrantChallenge + this.venture > this.selectedIntegrant.level);
+      this.integrantChallenge + this.venture >= this.selectedIntegrant.level);
   }
 
 }

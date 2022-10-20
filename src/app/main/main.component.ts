@@ -19,16 +19,17 @@ export class MainComponent implements OnInit {
   avail_powerSource: Integrant[] = [];
 
   challengeLevel = 1;
-
+  set_item_level?: number;
+  set_depletion?: number;
+  venture?: number;
+  item_created = false;
+/*
   selected_material?: Integrant;
   selected_ingredient?: Integrant;
   selected_catalyst?: Integrant;
   selected_stabilizer?: Integrant;
 
-  set_item_level?: number;
-  set_depletion?: number;
 
-  venture?: number;
   material_challenge?: number;
   ingredient_challenge?: number;
   catalyst_challenge?: number;
@@ -40,7 +41,7 @@ export class MainComponent implements OnInit {
   stabilizer_needed = false;
   power_source_needed = false;
   mishap = false;
-
+*/
   challenges?: Challenge[] = [];
 
   constructor(
@@ -71,8 +72,8 @@ export class MainComponent implements OnInit {
   handleMake() {
     if (this.set_item_level && this.set_depletion) {
       this.challenges.push({
-        integrantList: this.avail_ingredient,
-        integrantType: 'Ingredient',
+        integrantList: this.avail_material,
+        integrantType: 'Material',
         initVenture: 1
       });
     }
@@ -81,12 +82,20 @@ export class MainComponent implements OnInit {
   handleCheck(checkResult: boolean) {
     if (checkResult) {
       this.challengeLevel++;
-      if (this.challengeLevel<this.set_item_level) {
+      if (this.challengeLevel<=this.set_item_level) {
         this.challenges.push({
           integrantList: this.avail_ingredient,
           integrantType: 'Ingredient',
           initVenture: 1
         });
+      } else if (this.challengeLevel===this.set_item_level+1) {
+        this.challenges.push({
+          integrantList: this.avail_powerSource,
+          integrantType: 'Power Source',
+          initVenture: 1
+        });
+      } else {
+        this.item_created = true;
       }
     }
   }
