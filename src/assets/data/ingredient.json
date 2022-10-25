@@ -1,192 +1,192 @@
 [
   {
-    "ingredient": "Iron",
+    "name": "Iron",
     "level": 1,
     "cost": 10,
     "currency": "crystal orbs"
   },
   {
-    "ingredient": "Common Wood",
+    "name": "Common Wood",
     "level": 1,
     "cost": 10,
     "currency": "crystal orbs"
   },
   {
-    "ingredient": "Sugar",
+    "name": "Sugar",
     "level": 1,
     "cost": 10,
     "currency": "glass orbs"
   },
   {
-    "ingredient": "Salt",
+    "name": "Salt",
     "level": 1,
     "cost": 10,
     "currency": "glass orbs"
   },
   {
-    "ingredient": "Spices",
+    "name": "Spices",
     "level": 1,
     "cost": 10,
     "currency": "glass orbs"
   },
   {
-    "ingredient": "Honey",
+    "name": "Honey",
     "level": 1,
     "cost": 10,
     "currency": "glass orbs"
   },
   {
-    "ingredient": "Caterpillar",
+    "name": "Caterpillar",
     "level": 1,
     "cost": 10,
     "currency": "glass orbs"
   },
   {
-    "ingredient": "Mistletoe",
+    "name": "Mistletoe",
     "level": 1,
     "cost": 10,
     "currency": "glass orbs"
   },
   {
-    "ingredient": "Bat Wings",
+    "name": "Bat Wings",
     "level": 2,
     "cost": 50,
     "currency": "glass orbs"
   },
   {
-    "ingredient": "Rat Tail",
+    "name": "Rat Tail",
     "level": 2,
     "cost": 50,
     "currency": "glass orbs"
   },
   {
-    "ingredient": "Newt's Eye",
+    "name": "Newt's Eye",
     "level": 2,
     "cost": 50,
     "currency": "glass orbs"
   },
   {
-    "ingredient": "Elderflower Stems",
+    "name": "Elderflower Stems",
     "level": 2,
     "cost": 50,
     "currency": "glass orbs"
   },
   {
-    "ingredient": "Black Beetle Eye",
+    "name": "Black Beetle Eye",
     "level": 2,
     "cost": 50,
     "currency": "glass orbs"
   },
   {
-    "ingredient": "Powdered Moonstone",
+    "name": "Powdered Moonstone",
     "level": 2,
     "cost": 50,
     "currency": "glass orbs"
   },
   {
-    "ingredient": "Liquid Silver",
+    "name": "Liquid Silver",
     "level": 2,
     "cost": 50,
     "currency": "glass orbs"
   },
   {
-    "ingredient": "Bone Dust",
+    "name": "Bone Dust",
     "level": 2,
     "cost": 50,
     "currency": "glass orbs"
   },
   {
-    "ingredient": "Nightshade",
+    "name": "Nightshade",
     "level": 2,
     "cost": 50,
     "currency": "glass orbs"
   },
   {
-    "ingredient": "Peacock Feather",
+    "name": "Peacock Feather",
     "level": 2,
     "cost": 50,
     "currency": "glass orbs"
   },
   {
-    "ingredient": "Crocodile Heart",
+    "name": "Crocodile Heart",
     "level": 3,
     "cost": 100,
     "currency": "glass orbs"
   },
   {
-    "ingredient": "Powdered lilbana leaf",
+    "name": "Powdered lilbana leaf",
     "level": 3,
     "cost": 1,
     "currency": "crystal orbs"
   },
   {
-    "ingredient": "Eyelash of an infant",
+    "name": "Eyelash of an infant",
     "level": 3,
     "cost": 1,
     "currency": "crystal orbs"
   },
   {
-    "ingredient": "Elderbrin Tears",
+    "name": "Elderbrin Tears",
     "level": 3,
     "cost": 1,
     "currency": "crystal orbs"
   },
   {
-    "ingredient": "Toad hairs",
+    "name": "Toad hairs",
     "level": 4,
     "cost": 2,
     "currency": "crystal orbs"
   },
   {
-    "ingredient": "Nettle Bird Feather",
+    "name": "Nettle Bird Feather",
     "level": 4,
     "cost": 5,
     "currency": "crystal orbs"
   },
   {
-    "ingredient": "Mummy Dust",
+    "name": "Mummy Dust",
     "level": 4,
     "cost": 5,
     "currency": "crystal orbs"
   },
   {
-    "ingredient": "Gravel trod upon by a king",
+    "name": "Gravel trod upon by a king",
     "level": 5,
     "cost": 10,
     "currency": "crystal orbs"
   },
   {
-    "ingredient": "Polist petals",
+    "name": "Polist petals",
     "level": 6,
     "cost": 20,
     "currency": "crystal orbs"
   },
   {
-    "ingredient": "Powdered despair",
+    "name": "Powdered despair",
     "level": 7,
     "cost": 50,
     "currency": "crystal orbs"
   },
   {
-    "ingredient": "Truespider eye",
+    "name": "Truespider eye",
     "level": 7,
     "cost": 50,
     "currency": "crystal orbs"
   },
   {
-    "ingredient": "Errix hound blood",
+    "name": "Errix hound blood",
     "level": 8,
     "cost": 1,
     "currency": "mage coins"
   },
   {
-    "ingredient": "Secret name of an angel",
+    "name": "Secret name of an angel",
     "level": 9,
     "cost": 2,
     "currency": "mage coins"
   },
   {
-    "ingredient": "Godsblood",
+    "name": "Godsblood",
     "level": 10,
     "cost": 3,
     "currency": "mage coins"

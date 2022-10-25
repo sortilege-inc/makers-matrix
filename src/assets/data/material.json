@@ -1,174 +1,174 @@
 [
   {
-    "material": "Iron",
+    "name": "Iron",
     "level": 1,
     "cost": 10,
     "currency": "crystal orbs"
   },
   {
-    "material": "Common Wood",
+    "name": "Common Wood",
     "level": 1,
     "cost": 10,
     "currency": "crystal orbs"
   },
   {
-    "material": "Granite",
+    "name": "Granite",
     "level": 1,
     "cost": 10,
     "currency": "crystal orbs"
   },
   {
-    "material": "Glass",
+    "name": "Glass",
     "level": 1,
     "cost": 10,
     "currency": "crystal orbs"
   },
   {
-    "material": "Crystal",
+    "name": "Crystal",
     "level": 2,
     "cost": 25,
     "currency": "crystal orbs"
   },
   {
-    "material": "Fine Iron",
+    "name": "Fine Iron",
     "level": 2,
     "cost": 25,
     "currency": "crystal orbs"
   },
   {
-    "material": "Goblinbone",
+    "name": "Goblinbone",
     "level": 2,
     "cost": 25,
     "currency": "crystal orbs"
   },
   {
-    "material": "Steel",
+    "name": "Steel",
     "level": 2,
     "cost": 25,
     "currency": "crystal orbs"
   },
   {
-    "material": "Gold",
+    "name": "Gold",
     "level": 3,
     "cost": 50,
     "currency": "crystal orbs"
   },
   {
-    "material": "Silver",
+    "name": "Silver",
     "level": 3,
     "cost": 50,
     "currency": "crystal orbs"
   },
   {
-    "material": "Human Flesh",
+    "name": "Human Flesh",
     "level": 3,
     "cost": 50,
     "currency": "crystal orbs"
   },
   {
-    "material": "Ancient Oak",
+    "name": "Ancient Oak",
     "level": 3,
     "cost": 50,
     "currency": "crystal orbs"
   },
   {
-    "material": "Emerald",
+    "name": "Emerald",
     "level": 4,
     "cost": 75,
     "currency": "crystal orbs"
   },
   {
-    "material": "Diamond",
+    "name": "Diamond",
     "level": 4,
     "cost": 75,
     "currency": "crystal orbs"
   },
   {
-    "material": "Ice",
+    "name": "Ice",
     "level": 4,
     "cost": 75,
     "currency": "crystal orbs"
   },
   {
-    "material": "Silver Yak Hide",
+    "name": "Silver Yak Hide",
     "level": 5,
     "cost": 100,
     "currency": "crystal orbs"
   },
   {
-    "material": "Taborwire Threads",
+    "name": "Taborwire Threads",
     "level": 5,
     "cost": 100,
     "currency": "crystal orbs"
   },
   {
-    "material": "Hastric Wood",
+    "name": "Hastric Wood",
     "level": 5,
     "cost": 100,
     "currency": "crystal orbs"
   },
   {
-    "material": "Lusterstone",
+    "name": "Lusterstone",
     "level": 6,
     "cost": 150,
     "currency": "crystal orbs"
   },
   {
-    "material": "Ebonwood",
+    "name": "Ebonwood",
     "level": 6,
     "cost": 150,
     "currency": "crystal orbs"
   },
   {
-    "material": "Frozen Curses",
+    "name": "Frozen Curses",
     "level": 6,
     "cost": 150,
     "currency": "crystal orbs"
   },
   {
-    "material": "Desaldium",
+    "name": "Desaldium",
     "level": 6,
     "cost": 150,
     "currency": "crystal orbs"
   },
   {
-    "material": "Demonbone",
+    "name": "Demonbone",
     "level": 7,
     "cost": 200,
     "currency": "crystal orbs"
   },
   {
-    "material": "Demonflesh",
+    "name": "Demonflesh",
     "level": 7,
     "cost": 200,
     "currency": "crystal orbs"
   },
   {
-    "material": "Talish Glass",
+    "name": "Talish Glass",
     "level": 8,
     "cost": 1,
     "currency": "mage coins"
   },
   {
-    "material": "Sands of Time",
+    "name": "Sands of Time",
     "level": 9,
     "cost": 2,
     "currency": "mage coins"
   },
   {
-    "material": "Solidified Song",
+    "name": "Solidified Song",
     "level": 9,
     "cost": 2,
     "currency": "mage coins"
   },
   {
-    "material": "Pure Love",
+    "name": "Pure Love",
     "level": 10,
     "cost": 5,
     "currency": "mage coins"
   },
   {
-    "material": "Godflesh",
+    "name": "Godflesh",
     "level": 10,
     "cost": 5,
     "currency": "mage coins"

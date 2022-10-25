@@ -1,8 +1,104 @@
 [
   {
-    "stabilizer": "Iron",
+    "name": "Cow’s milk",
+    "level": 1,
+    "cost": 10,
+    "currency": "orbs"
+  },
+  {
+    "name": "Purified water",
+    "level": 1,
+    "cost": 10,
+    "currency": "orbs"
+  },
+  {
+    "name": "Aloe",
+    "level": 1,
+    "cost": 10,
+    "currency": "orbs"
+  },
+  {
+    "name": "Vinegar",
+    "level": 1,
+    "cost": 10,
+    "currency": "orbs"
+  },
+  {
+    "name": "Pure note of middle C",
+    "level": 2,
+    "cost": 50,
+    "currency": "orbs"
+  },
+  {
+    "name": "Cat’s eye",
+    "level": 2,
+    "cost": 50,
+    "currency": "orbs"
+  },
+  {
+    "name": "Turtle shell",
+    "level": 2,
+    "cost": 50,
+    "currency": "orbs"
+  },
+  {
+    "name": "Powdered diamond",
+    "level": 3,
+    "cost": 1,
+    "currency": "crystal orb"
+  },
+  {
+    "name": "Lyvandris syrup",
+    "level": 4,
+    "cost": 2,
+    "currency": "crystal orbs"
+  },
+  {
+    "name": "Urbrail mist",
+    "level": 5,
+    "cost": 5,
+    "currency": "crystal orbs"
+  },
+  {
+    "name": "Milk silk",
     "level": 6,
     "cost": 10,
     "currency": "crystal orbs"
+  },
+  {
+    "name": "Kithra heart",
+    "level": 7,
+    "cost": 20,
+    "currency": "crystal orbs"
+  },
+  {
+    "name": "Mother’s final word",
+    "level": 8,
+    "cost": 1,
+    "currency": "magecoin"
+  },
+  {
+    "name": "Breath of an angel",
+    "level": 8,
+    "cost": 1,
+    "currency": "magecoin"
+  },
+  {
+    "name": "Cat’s loyalty",
+    "level": 9,
+    "cost": 2,
+    "currency": "magecoins"
+  },
+  {
+    "name": "Liquid moonlight",
+    "level": 9,
+    "cost": 2,
+    "currency": "magecoins"
+  },
+  {
+    "name": "Gaze of an angel",
+    "level": 10,
+    "cost": 5,
+    "currency": "magecoins"
   }
 ]

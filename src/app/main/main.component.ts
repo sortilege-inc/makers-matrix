@@ -1,9 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MainService } from './main-service.service';
-import { MatrixMaterial } from './interfaces/matrix-material';
-import { MatrixIngredient } from './interfaces/matrix-ingredient';
-import { MatrixCatalyst } from './interfaces/matrix-catalyst';
-import { MatrixStabilizer } from './interfaces/matrix-stabilizer';
+import { Integrant } from './integrant';
+import { Challenge } from './challenge';
 
 @Component({
   selector: 'app-main',
@@ -14,31 +12,37 @@ export class MainComponent implements OnInit {
   players = [];
   selected_player;
 
-  avail_material: MatrixMaterial[] = [];
-  avail_ingredient: MatrixIngredient[] = [];
-  avail_catalyst: MatrixCatalyst[] = [];
-  avail_stabilizer: MatrixStabilizer[] = [];
+  avail_material: Integrant[] = [];
+  avail_ingredient: Integrant[] = [];
+  avail_catalyst: Integrant[] = [];
+  avail_stabilizer: Integrant[] = [];
+  avail_powerSource: Integrant[] = [];
 
-  selected_material?: MatrixMaterial;
-  selected_ingredient?: MatrixIngredient;
-  selected_catalyst?: MatrixCatalyst;
-  selected_stabilizer?: MatrixStabilizer;
-
+  challengeLevel = 1;
   set_item_level?: number;
   set_depletion?: number;
-
   venture?: number;
+  item_created = false;
+/*
+  selected_material?: Integrant;
+  selected_ingredient?: Integrant;
+  selected_catalyst?: Integrant;
+  selected_stabilizer?: Integrant;
+
+
   material_challenge?: number;
   ingredient_challenge?: number;
   catalyst_challenge?: number;
   stabilizer_challenge?: number;
 
-  material_needed: boolean = false;
-  ingredient_needed: boolean = false;
-  catalyst_needed: boolean = false;
-  stabilizer_needed: boolean = false;
-  power_source_needed: boolean = false;
-  mishap: boolean = false;
+  material_needed = false;
+  ingredient_needed = false;
+  catalyst_needed = false;
+  stabilizer_needed = false;
+  power_source_needed = false;
+  mishap = false;
+*/
+  challenges?: Challenge[] = [];
 
   constructor(
     private service: MainService
@@ -57,29 +61,64 @@ export class MainComponent implements OnInit {
     this.service.getIngredients().subscribe(data => {
       this.avail_ingredient = data;
     });
+    this.service.getPowerSource().subscribe(data => {
+      this.avail_powerSource = data;
+    });
     this.service.getPlayers().subscribe(data => {
       this.players = data;
     });
   }
 
-  materialSelect(material: MatrixMaterial): void {
+  handleMake() {
+    if (this.set_item_level && this.set_depletion) {
+      this.challenges.push({
+        integrantList: this.avail_material,
+        integrantType: 'Material',
+        initVenture: 1
+      });
+    }
+  }
+
+  handleCheck(checkResult: boolean) {
+    if (checkResult) {
+      this.challengeLevel++;
+      if (this.challengeLevel<=this.set_item_level) {
+        this.challenges.push({
+          integrantList: this.avail_ingredient,
+          integrantType: 'Ingredient',
+          initVenture: 1
+        });
+      } else if (this.challengeLevel===this.set_item_level+1) {
+        this.challenges.push({
+          integrantList: this.avail_powerSource,
+          integrantType: 'Power Source',
+          initVenture: 1
+        });
+      } else {
+        this.item_created = true;
+      }
+    }
+  }
+
+  playerSelect(player): void {
+    this.selected_player = player;
+  }
+
+  /*
+  materialSelect(material: Integrant): void {
     this.selected_material = material;
   }
 
-  ingredientSelect(ingredient: MatrixIngredient): void {
+  ingredientSelect(ingredient: Integrant): void {
     this.selected_ingredient = ingredient;
   }
 
 
-  playerSelect(player):void {
-    this.selected_player = player;
-  }
-
-  catalystSelect(catalyst: MatrixCatalyst): void {
+  catalystSelect(catalyst: Integrant): void {
     this.selected_catalyst = catalyst;
   }
 
-  stabilizerSelect(stabilizer: MatrixStabilizer): void {
+  stabilizerSelect(stabilizer: Integrant): void {
     this.selected_stabilizer = stabilizer;
   }
 
@@ -98,8 +137,8 @@ export class MainComponent implements OnInit {
   }
 
   ingredientChallengeCheck() {
-    this.catalyst_needed = this.ingredient_challenge && this.venture && this.selected_ingredient &&
-      (this.ingredient_challenge + this.venture) < this.selected_ingredient.level;
+    this.catalyst_needed = !!(this.ingredient_challenge && this.venture && this.selected_ingredient &&
+      this.ingredient_challenge + this.venture < this.selected_ingredient.level);
   }
 
   catalystChallengeCheck() {
@@ -111,6 +150,7 @@ export class MainComponent implements OnInit {
     this.mishap = this.stabilizer_challenge && this.venture && this.selected_stabilizer &&
       this.stabilizer_challenge + this.venture < this.selected_stabilizer.level;
   }
+*/
 
 }
 
